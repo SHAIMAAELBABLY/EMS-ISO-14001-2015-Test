@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Parkinsans", sans-serif;
+}
+.quiz {
+    margin: 20px auto;
+    width: 95%; /* Adjust for smaller screens */
+    max-width: 800px; /* Limit the width for larger screens */
+    background-color: #37A50B;
+    padding: 15px;
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.quiz .big-header {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Add space between items */
+}
+
+.quiz .big-header img.logo {
+    width: 120px; /* Reduce size for smaller screens */
+    margin: 0 auto; /* Center logo on smaller screens */
+}
+
+.quiz .big-header .header {
+    flex: 1;
+    text-align: center; /* Adjust for smaller screens */
+    font-size: 14px;
+}
+
+.quiz .big-header .header h2 {
+    padding: 20px 10px;
+    font-size: 18px; /* Responsive font size */
+}
+
+.quiz .test-info {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items for smaller screens */
+    background-color: #C3F8AE;
+    padding: 20px;
+    gap: 10px; /* Add space between flex items */
+}
+
+.quiz .test-info .standard,
+.quiz .test-info .quest-num {
+    flex: 1;
+    text-align: center; /* Center align on smaller screens */
+    font-size: 16px; /* Responsive font size */
+}
+
+.quiz .test-body {
+    background-color: #E8FBE1;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+
+.quiz .test-body h3 {
+    margin: 0;
+    font-size: 18px; /* Responsive font size */
+    text-align: justify; /* Center align questions */
+    font-weight: lighter;
+}
+
+.quiz .answers-body {
+    background-color: #E8FBE1;
+    padding: 0 20px 20px;
+}
+
+.quiz .answers-body .answer {
+    background-color: #E4FED9;
+    padding: 15px;
+    font-size: 14px; /* Responsive font size */
+}
+
+.quiz .answers-body .answer:not(:last-child) {
+    border-bottom: 1px solid #7DDA58;
+}
+
+.quiz .answers-body .answer input[type="Radio"]:checked + label {
+    color: #1C6000;
+}
+
+.quiz .answers-body .answer label {
+    cursor: pointer;
+    font-weight: bold;
+    color: #051023;
+}
+
+.quiz .btn {
+    background-color: #1C6000;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%; /* Adjust button size for smaller screens */
+    max-width: 300px; /* Limit size for larger screens */
+    color: #E4FED9;
+    font-size: 18px; /* Responsive font size */
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    text-align: center; /* Center align button text */
+    display: block; /* Center button */
+}
+
+.quiz .btn:hover {
+    background-color: #C3F8AE;
+    color: #1C6000;
+}
+
+.quiz .all-quest {
+    border-top: 1px solid #7DDA58;
+    background-color: #C3F8AE;
+    display: flex;
+    flex-wrap: wrap; /* Wrap items for smaller screens */
+    justify-content: center; /* Center align items */
+    padding: 20px;
+    gap: 10px; /* Add space between items */
+}
+
+.quiz .all-quest .quests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Add space between items */
+    justify-content: center; /* Center align items */
+}
+
+.quiz .all-quest .quests span {
+    width: 20px;
+    height: 20px;
+    background-color: #E4FED9;
+    margin: 0;
+    border-radius: 50%; /* Make dots circular */
+}
+
+.quiz .all-quest .quests span.on {
+    background-color: #1C6000;
+}
+
+.quiz .results span {
+    font-weight: bold;
+}
+
+.quiz .results span.fail {
+    color: #E4080A;
+}
+
+.quiz .results span.good {
+    color: #1C6000;
+}
+
+.quiz .results span.prefect {
+    color: #0c2004;
+}
+
+.footer {
+    background-color: #1C6000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer p {
+    font-size: 14px; /* Responsive font size */
+}
+
+.logoqi {
+    height: 1em;
+    width: auto;
+    vertical-align: middle;
+}
+
+/* Media Queries for Small Screens */
+@media (max-width: 768px) {
+    .quiz .big-header {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .quiz .big-header img.logo {
+        margin-bottom: 20px; /* Add space below logo */
+    }
+
+    .quiz .test-info {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .quiz .btn {
+        width: 90%; /* Increase width on small screens */
+    }
+
+    .quiz .test-body, .quiz .answers-body {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+}
