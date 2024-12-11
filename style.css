@@ -90,6 +90,7 @@ body{
     cursor: pointer;
     font-weight: bold;
     color: #051023;
+    margin-left: 10px;
 }
 
 .quiz .btn {
